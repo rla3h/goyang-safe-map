@@ -1,6 +1,6 @@
 streamlit
-streamlit-folium
-folium
 pandas
+folium
+streamlit-folium
 osmnx
 networkx
