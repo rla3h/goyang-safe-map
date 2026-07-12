@@ -1,4 +1,9 @@
 import streamlit as st
+
+# 페이지 설정을 모바일 친화적으로 변경
+st.set_page_config(layout="wide", page_title="SafeWay Goyang")
+
+import streamlit as st
 import pandas as pd
 import folium
 from folium.plugins import HeatMap
@@ -14,8 +19,8 @@ st.set_page_config(page_title="SafeWay 고양", page_icon="🛡️", layout="wid
 @st.cache_data
 def load_data():
     # 파일 이름을 정확히 매칭했습니다.
-    cctv_df = pd.read_csv('data/CCTV정보_경기고양시.csv', encoding='cp949')
-    bell_df = pd.read_csv('data/안전비상벨위치현황(제공표준).csv', encoding='cp949')
+    cctv_df = pd.read_csv('CCTV정보_경기고양시.csv', encoding='cp949')
+    bell_df = pd.read_csv('안전비상벨위치현황(제공표준).csv', encoding='cp949')
     return cctv_df, bell_df
 
 cctv_data, bell_data = load_data()
